@@ -1,0 +1,15 @@
+@model int
+
+@{
+    ViewBag.Title = "404 Error";
+}
+
+<div>
+    <h4>404 Not Found Error:</h4>
+    <hr />
+    <h5>
+        Facilitet with ID = @Model cannot be found
+    </h5>
+</div>
+
+<a asp-controller="Facilitet" asp-action="List">Click here to see the list of all facilitets</a>

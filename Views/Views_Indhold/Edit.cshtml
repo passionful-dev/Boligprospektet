@@ -1,0 +1,41 @@
+@model IndholdEditViewModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Indhold Edit";
+}
+
+@*Without Bootstrap*@
+    <form asp-controller="Indhold" asp-action="Edit" method="post">
+
+        <div asp-validation-summary="All"></div>
+
+        <input hidden asp-for="Indhold_Id" />
+
+        <div>
+            <label asp-for="Date_Time"></label>
+            <input asp-for="Date_Time" />
+            <span asp-validation-for="Date_Time"></span>
+        </div>
+        <div>
+            <label asp-for="User_Id"></label>
+            <input asp-for="User_Id" />
+            <span asp-validation-for="User_Id"></span>
+        </div>
+        <div>
+            <label asp-for="Indhold_Navn"></label>
+            <input asp-for="Indhold_Navn" />
+            <span asp-validation-for="Indhold_Navn"></span>
+        </div>
+        <div>
+            <label asp-for="Indhold_Beskrivelser"></label>
+            <input asp-for="Indhold_Beskrivelser" />
+            <span asp-validation-for="Indhold_Beskrivelser"></span>
+        </div>
+
+        <div>
+            <button type="submit">Update</button>
+        </div>
+
+
+    </form>

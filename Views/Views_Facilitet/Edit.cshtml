@@ -1,0 +1,36 @@
+@model FacilitetEditViewModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Facilitet Edit";
+}
+
+@*Without Bootstrap*@
+    <form asp-controller="Facilitet" asp-action="Edit" method="post">
+
+        <div asp-validation-summary="All"></div>
+
+        <input hidden asp-for="Facilitet_Id" />
+
+        <div>
+            <label asp-for="Bolig_Id"></label>
+            <input asp-for="Bolig_Id" />
+            <span asp-validation-for="Bolig_Id"></span>
+        </div>
+        <div>
+            <label asp-for="Faciliteter"></label>
+            <input asp-for="Faciliteter" />
+            <span asp-validation-for="Faciliteter"></span>
+        </div>
+        <div>
+            <label asp-for="Facilitet_Beskrivelser"></label>
+            <input asp-for="Facilitet_Beskrivelser" />
+            <span asp-validation-for="Facilitet_Beskrivelser"></span>
+        </div>
+
+        <div>
+            <button type="submit">Update</button>
+        </div>
+
+
+    </form>

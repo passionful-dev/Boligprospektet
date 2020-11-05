@@ -1,0 +1,42 @@
+@model Indhold_activitetDetailsViewModel
+
+@{
+    ViewBag.Title = "Indhold_activitet Details";
+    
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <h3>@Model.PageTitle</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date_Time</th>
+                    <th>User_Id</th>
+                    <th>Indhold_Id</th>
+                    <th>Indhold_Navn</th>
+                    <th>Indhold_activitet_Navn</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Model.Indhold_activitet.Date_Time</td>
+                    <td>@Model.Indhold_activitet.User_Id</td>
+                    <td>@Model.Indhold_activitet.Indhold_Id</td>
+                    <td>@Model.Indhold_activitet.Indhold_Navn</td>
+                    <td>@Model.Indhold_activitet.Indhold_activitet_Navn</td>
+                </tr>
+            </tbody>
+        </table>
+
+        @section Scripts {
+            <script src="~/js/CustomScript.js"></script>
+        }
+    </body>
+</html>
+
+ 

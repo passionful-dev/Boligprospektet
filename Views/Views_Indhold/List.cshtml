@@ -1,0 +1,44 @@
+@model IEnumerable<Indhold>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Indholds List";
+}
+
+<form asp-controller="Indhold" asp-action="List" method="post">
+    <table>
+        <thead>
+            <tr>
+                <th>Date_Time</th>
+                <th>User_Id</th>
+                <th>Indhold_Navn</th>
+                <th>Indhold_Beskrivelser</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var indhold in Model)
+            {
+                <tr>
+                    <td>@indhold.Date_Time</td>
+                    <td>@indhold.User_Id</td>
+                    <td>@indhold.Indhold_Navn</td>
+                    <td>@indhold.Indhold_Beskrivelser</td>
+                    <td><a asp-controller="Indhold" asp-action="Details" asp-route-id="@indhold.Indhold_Id">
+                        View</a></td>
+                    <td><a asp-controller="Indhold" asp-action="Edit" asp-route-id="@indhold.Indhold_Id">
+                        Edit</a></td>
+                    <td><a asp-controller="Indhold" asp-action="Delete" asp-route-id="@indhold.Indhold_Id">
+                        Delete</a></td>
+
+                    @*<td><button asp-controller="indhold" asp-action="edit" 
+                                asp-route-id="@indhold.Indhold_Id" type="submit">Edit</button></td>
+                    <td><button asp-controller="Indhold" asp-action="Details" 
+                                asp-route-id="@indhold.Indhold_Id" type="submit">Details</button></td>*@
+
+                </tr>
+            }
+        </tbody>
+    </table>
+    
+
+</form>

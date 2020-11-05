@@ -1,0 +1,42 @@
+@model IEnumerable<Bolig_type>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Bolig_types List";
+}
+
+<form asp-controller="Bolig_type" asp-action="List" method="post">
+    <table>
+        <thead>
+            <tr>
+                <th>Date_Time</th>
+                <th>User_Id</th>
+                <th>Bolig_type_Navn</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var bolig_type in Model)
+            {
+                <tr>
+                    <td>@bolig_type.Date_Time</td>
+                    <td>@bolig_type.User_Id</td>
+                    <td>@bolig_type.Bolig_type_Navn</td>
+                    <td><a asp-controller="Bolig_type" asp-action="Details" asp-route-id="@bolig_type.Bolig_type_Id">
+                        View</a></td>
+                    <td><a asp-controller="Bolig_type" asp-action="Edit" asp-route-id="@bolig_type.Bolig_type_Id">
+                        Edit</a></td>
+                    <td><a asp-controller="Bolig_type" asp-action="Delete" asp-route-id="@bolig_type.Bolig_type_Id">
+                        Delete</a></td>
+
+                    @*<td><button asp-controller="bolig_type" asp-action="edit" 
+                                asp-route-id="@bolig_type.Bolig_type_Id" type="submit">Edit</button></td>
+                    <td><button asp-controller="Bolig_type" asp-action="Details" 
+                                asp-route-id="@bolig_type.Bolig_type_Id" type="submit">Details</button></td>*@
+
+                </tr>
+            }
+        </tbody>
+    </table>
+    
+
+</form>

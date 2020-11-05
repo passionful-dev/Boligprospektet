@@ -1,0 +1,64 @@
+@model BoligDetailsViewModel
+
+@{
+    ViewBag.Title = "Bolig Details";
+    
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <h3>@Model.PageTitle</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date_Time</th>
+                    <th>User_Id</th>
+                    <th>Type_Id</th>
+                    <th>Adresse_Vej</th>
+                    <th>Adresse_Postnr</th>
+                    <th>Adresse_Code</th>
+                    <th>Adresse_By</th>
+                    <th>Leje_kr</th>
+                    <th>Deposit_kr</th>
+                    <th>Areal_msquare</th>
+                    <th>Antal_Værelser</th>
+                    <th>Bolig_Beskrivelser</th>
+                    <th>Bolig_Navn</th>
+                    <th>Photos</th>
+                    <th>Ledig_Fra</th>
+                    <th>Annonse_Til</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Model.Bolig.Date_Time</td>
+                    <td>@Model.Bolig.User_Id</td>
+                    <td>@Model.Bolig.Type_Id</td>
+                    <td>@Model.Bolig.Adresse_Vej</td>
+                    <td>@Model.Bolig.Adresse_Postnr</td>
+                    <td>@Model.Bolig.Adresse_Code</td>
+                    <td>@Model.Bolig.Adresse_By</td>
+                    <td>@Model.Bolig.Leje_kr</td>
+                    <td>@Model.Bolig.Deposit_kr</td>
+                    <td>@Model.Bolig.Areal_msquare</td>
+                    <td>@Model.Bolig.Antal_Værelser</td>
+                    <td>@Model.Bolig.Bolig_Beskrivelser</td>
+                    <td>@Model.Bolig.Bolig_Navn</td>
+                    <td>@Model.Bolig.Photos</td>
+                    <td>@Model.Bolig.Ledig_Fra</td>
+                    <td>@Model.Bolig.Annonse_Til</td>
+                </tr>
+            </tbody>
+        </table>
+
+        @section Scripts {
+            <script src="~/js/CustomScript.js"></script>
+        }
+    </body>
+</html>
+
+ 

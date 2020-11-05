@@ -1,0 +1,40 @@
+@model User_activitetDetailsViewModel
+
+@{
+    ViewBag.Title = "User_activitet Details";
+    
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <h3>@Model.PageTitle</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date_Time</th>
+                    <th>User_Id</th>
+                    <th>Fuldnavn</th>
+                    <th>User_activitet_Navn</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Model.User_activitet.Date_Time</td>
+                    <td>@Model.User_activitet.User_Id</td>
+                    <td>@Model.User_activitet.Fuldnavn</td>
+                    <td>@Model.User_activitet.User_activitet_Navn</td>
+                </tr>
+            </tbody>
+        </table>
+
+        @section Scripts {
+            <script src="~/js/CustomScript.js"></script>
+        }
+    </body>
+</html>
+
+ 

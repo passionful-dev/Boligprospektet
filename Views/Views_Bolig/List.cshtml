@@ -1,0 +1,68 @@
+@model IEnumerable<Bolig>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Boligs List";
+}
+
+<form asp-controller="Bolig" asp-action="List" method="post">
+    <table>
+        <thead>
+            <tr>
+                <th>Date_Time</th>
+                <th>User_Id</th>
+                <th>Type_Id</th>
+                <th>Adresse_Vej</th>
+                <th>Adresse_Postnr</th>
+                <th>Adresse_Code</th>
+                <th>Adresse_By</th>
+                <th>Leje_kr</th>
+                <th>Deposit_kr</th>
+                <th>Areal_msquare</th>
+                <th>Antal_Værelser</th>
+                <th>Bolig_Beskrivelser</th>
+                <th>Bolig_Navn</th>
+                <th>Photos</th>
+                <th>Ledig_Fra</th>
+                <th>Annonse_Til</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var bolig in Model)
+            {
+                <tr>
+                    <td>@bolig.Date_Time</td>
+                    <td>@bolig.User_Id</td>
+                    <td>@bolig.Type_Id</td>
+                    <td>@bolig.Adresse_Vej</td>
+                    <td>@bolig.Adresse_Postnr</td>
+                    <td>@bolig.Adresse_Code</td>
+                    <td>@bolig.Adresse_By</td>
+                    <td>@bolig.Leje_kr</td>
+                    <td>@bolig.Deposit_kr</td>
+                    <td>@bolig.Areal_msquare</td>
+                    <td>@bolig.Antal_Værelser</td>
+                    <td>@bolig.Bolig_Beskrivelser</td>
+                    <td>@bolig.Bolig_Navn</td>
+                    <td>@bolig.Photos</td>
+                    <td>@bolig.Ledig_Fra</td>
+                    <td>@bolig.Annonse_Til</td>
+                    <td><a asp-controller="Bolig" asp-action="Details" asp-route-id="@bolig.Bolig_Id">
+                        View</a></td>
+                    <td><a asp-controller="Bolig" asp-action="Edit" asp-route-id="@bolig.Bolig_Id">
+                        Edit</a></td>
+                    <td><a asp-controller="Bolig" asp-action="Delete" asp-route-id="@bolig.Bolig_Id">
+                        Delete</a></td>
+
+                    @*<td><button asp-controller="bolig" asp-action="edit" 
+                                asp-route-id="@bolig.Bolig_Id" type="submit">Edit</button></td>
+                    <td><button asp-controller="Bolig" asp-action="Details" 
+                                asp-route-id="@bolig.Bolig_Id" type="submit">Details</button></td>*@
+
+                </tr>
+            }
+        </tbody>
+    </table>
+    
+
+</form>

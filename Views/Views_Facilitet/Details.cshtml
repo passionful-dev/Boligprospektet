@@ -1,0 +1,38 @@
+@model FacilitetDetailsViewModel
+
+@{
+    ViewBag.Title = "Facilitet Details";
+    
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <h3>@Model.PageTitle</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Bolig_Id</th>
+                    <th>Faciliteter</th>
+                    <th>Facilitet_Beskrivelser</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Model.Facilitet.Bolig_Id</td>
+                    <td>@Model.Facilitet.Faciliteter</td>
+                    <td>@Model.Facilitet.Facilitet_Beskrivelser</td>
+                </tr>
+            </tbody>
+        </table>
+
+        @section Scripts {
+            <script src="~/js/CustomScript.js"></script>
+        }
+    </body>
+</html>
+
+ 

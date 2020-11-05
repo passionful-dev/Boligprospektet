@@ -1,0 +1,51 @@
+@model UserEditViewModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "User Edit";
+}
+
+@*Without Bootstrap*@
+    <form asp-controller="User" asp-action="Edit" method="post">
+
+        <div asp-validation-summary="All"></div>
+
+        <input hidden asp-for="User_Id" />
+
+        <div>
+            <label asp-for="Date_Time"></label>
+            <input asp-for="Date_Time" />
+            <span asp-validation-for="Date_Time"></span>
+        </div>
+        <div>
+            <label asp-for="Fuldnavn"></label>
+            <input asp-for="Fuldnavn" />
+            <span asp-validation-for="Fuldnavn"></span>
+        </div>
+        <div>
+            <label asp-for="Email"></label>
+            <input asp-for="Email" />
+            <span asp-validation-for="Email"></span>
+        </div>
+        <div>
+            <label asp-for="Password"></label>
+            <input asp-for="Password" />
+            <span asp-validation-for="Password"></span>
+        </div>
+        <div>
+            <label asp-for="Mobile"></label>
+            <input asp-for="Mobile" />
+            <span asp-validation-for="Mobile"></span>
+        </div>
+        <div>
+            <label asp-for="User_Type"></label>
+            <input asp-for="User_Type" />
+            <span asp-validation-for="User_Type"></span>
+        </div>
+
+        <div>
+            <button type="submit">Update</button>
+        </div>
+
+
+    </form>

@@ -1,0 +1,42 @@
+@model Bolig_type_activitetDetailsViewModel
+
+@{
+    ViewBag.Title = "Bolig_type_activitet Details";
+    
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <h3>@Model.PageTitle</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date_Time</th>
+                    <th>User_Id</th>
+                    <th>Bolig_type_Id</th>
+                    <th>Bolig_type_Navn</th>
+                    <th>Bolig_type_activitet_Navn</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Model.Bolig_type_activitet.Date_Time</td>
+                    <td>@Model.Bolig_type_activitet.User_Id</td>
+                    <td>@Model.Bolig_type_activitet.Bolig_type_Id</td>
+                    <td>@Model.Bolig_type_activitet.Bolig_type_Navn</td>
+                    <td>@Model.Bolig_type_activitet.Bolig_type_activitet_Navn</td>
+                </tr>
+            </tbody>
+        </table>
+
+        @section Scripts {
+            <script src="~/js/CustomScript.js"></script>
+        }
+    </body>
+</html>
+
+ 

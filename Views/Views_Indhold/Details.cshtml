@@ -1,0 +1,40 @@
+@model IndholdDetailsViewModel
+
+@{
+    ViewBag.Title = "Indhold Details";
+    
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <h3>@Model.PageTitle</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date_Time</th>
+                    <th>User_Id</th>
+                    <th>Indhold_Navn</th>
+                    <th>Indhold_Beskrivelser</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Model.Indhold.Date_Time</td>
+                    <td>@Model.Indhold.User_Id</td>
+                    <td>@Model.Indhold.Indhold_Navn</td>
+                    <td>@Model.Indhold.Indhold_Beskrivelser</td>
+                </tr>
+            </tbody>
+        </table>
+
+        @section Scripts {
+            <script src="~/js/CustomScript.js"></script>
+        }
+    </body>
+</html>
+
+ 

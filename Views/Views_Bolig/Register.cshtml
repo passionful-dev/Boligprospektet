@@ -1,0 +1,103 @@
+@model BoligCreateViewModel
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <h3>@ViewBag.PageTitle</h3>
+
+    @*Without Bootstrap*@
+    <form asp-controller="Bolig" asp-action="Register" method="post">
+
+        <div asp-validation-summary="All"></div>
+        <div>
+            <label asp-for="Date_Time"></label>
+            <input asp-for="Date_Time" />
+            <span asp-validation-for="Date_Time"></span>
+        </div>
+        <div>
+            <label asp-for="User_Id"></label>
+            <input asp-for="User_Id" />
+            <span asp-validation-for="User_Id"></span>
+        </div>
+        <div>
+            <label asp-for="Type_Id"></label>
+            <input asp-for="Type_Id" />
+            <span asp-validation-for="Type_Id"></span>
+        </div>
+        <div>
+            <label asp-for="Adresse_Vej"></label>
+            <input asp-for="Adresse_Vej" />
+            <span asp-validation-for="Adresse_Vej"></span>
+        </div>
+        <div>
+            <label asp-for="Adresse_Postnr"></label>
+            <input asp-for="Adresse_Postnr" />
+            <span asp-validation-for="Adresse_Postnr"></span>
+        </div>
+        <div>
+            <label asp-for="Adresse_Code"></label>
+            <input asp-for="Adresse_Code" />
+            <span asp-validation-for="Adresse_Code"></span>
+        </div>
+        <div>
+            <label asp-for="Adresse_By"></label>
+            <input asp-for="Adresse_By" />
+            <span asp-validation-for="Adresse_By"></span>
+        </div>
+        <div>
+            <label asp-for="Leje_kr"></label>
+            <input asp-for="Leje_kr" />
+            <span asp-validation-for="Leje_kr"></span>
+        </div>
+        <div>
+            <label asp-for="Deposit_kr"></label>
+            <input asp-for="Deposit_kr" />
+            <span asp-validation-for="Deposit_kr"></span>
+        </div>
+        <div>
+            <label asp-for="Areal_msquare"></label>
+            <input asp-for="Areal_msquare" />
+            <span asp-validation-for="Areal_msquare"></span>
+        </div>
+        <div>
+            <label asp-for="Antal_Værelser"></label>
+            <input asp-for="Antal_Værelser" />
+            <span asp-validation-for="Antal_Værelser"></span>
+        </div>
+        <div>
+            <label asp-for="Bolig_Beskrivelser"></label>
+            <input asp-for="Bolig_Beskrivelser" />
+            <span asp-validation-for="Bolig_Beskrivelser"></span>
+        </div>
+        <div>
+            <label asp-for="Bolig_Navn"></label>
+            <input asp-for="Bolig_Navn" />
+            <span asp-validation-for="Bolig_Navn"></span>
+        </div>
+        <div>
+            <label asp-for="Photos"></label>
+            <input asp-for="Photos" />
+            <span asp-validation-for="Photos"></span>
+        </div>
+        <div>
+            <label asp-for="Ledig_Fra"></label>
+            <input asp-for="Ledig_Fra" />
+            <span asp-validation-for="Ledig_Fra"></span>
+        </div>
+        <div>
+            <label asp-for="Annonse_Til"></label>
+            <input asp-for="Annonse_Til" />
+            <span asp-validation-for="Annonse_Til"></span>
+        </div>
+
+        <button type="submit">Create</button>
+
+    </form>
+     
+    @section Scripts {
+            <script src="~/js/CustomScript.js"></script>
+    }
+</body>
+</html>

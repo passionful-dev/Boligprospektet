@@ -1,0 +1,53 @@
+@model UserCreateViewModel
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <h3>@ViewBag.PageTitle</h3>
+
+    @*Without Bootstrap*@
+    <form asp-controller="User" asp-action="Register" method="post">
+
+        <div asp-validation-summary="All"></div>
+        <div>
+            <label asp-for="Date_Time"></label>
+            <input asp-for="Date_Time" />
+            <span asp-validation-for="Date_Time"></span>
+        </div>
+        <div>
+            <label asp-for="Fuldnavn"></label>
+            <input asp-for="Fuldnavn" />
+            <span asp-validation-for="Fuldnavn"></span>
+        </div>
+        <div>
+            <label asp-for="Email"></label>
+            <input asp-for="Email" />
+            <span asp-validation-for="Email"></span>
+        </div>
+        <div>
+            <label asp-for="Password"></label>
+            <input asp-for="Password" />
+            <span asp-validation-for="Password"></span>
+        </div>
+        <div>
+            <label asp-for="Mobile"></label>
+            <input asp-for="Mobile" />
+            <span asp-validation-for="Mobile"></span>
+        </div>
+        <div>
+            <label asp-for="User_Type"></label>
+            <input asp-for="User_Type" />
+            <span asp-validation-for="User_Type"></span>
+        </div>
+
+        <button type="submit">Create</button>
+
+    </form>
+     
+    @section Scripts {
+            <script src="~/js/CustomScript.js"></script>
+    }
+</body>
+</html>

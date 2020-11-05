@@ -1,0 +1,38 @@
+@model Bolig_typeDetailsViewModel
+
+@{
+    ViewBag.Title = "Bolig_type Details";
+    
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <h3>@Model.PageTitle</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date_Time</th>
+                    <th>User_Id</th>
+                    <th>Bolig_type_Navn</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Model.Bolig_type.Date_Time</td>
+                    <td>@Model.Bolig_type.User_Id</td>
+                    <td>@Model.Bolig_type.Bolig_type_Navn</td>
+                </tr>
+            </tbody>
+        </table>
+
+        @section Scripts {
+            <script src="~/js/CustomScript.js"></script>
+        }
+    </body>
+</html>
+
+ 

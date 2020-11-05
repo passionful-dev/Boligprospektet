@@ -1,0 +1,46 @@
+@model Bolig_type_activitetEditViewModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Bolig_type_activitet Edit";
+}
+
+@*Without Bootstrap*@
+    <form asp-controller="Bolig_type_activitet" asp-action="Edit" method="post">
+
+        <div asp-validation-summary="All"></div>
+
+        <input hidden asp-for="Bolig_type_activitet_Id" />
+
+        <div>
+            <label asp-for="Date_Time"></label>
+            <input asp-for="Date_Time" />
+            <span asp-validation-for="Date_Time"></span>
+        </div>
+        <div>
+            <label asp-for="User_Id"></label>
+            <input asp-for="User_Id" />
+            <span asp-validation-for="User_Id"></span>
+        </div>
+        <div>
+            <label asp-for="Bolig_type_Id"></label>
+            <input asp-for="Bolig_type_Id" />
+            <span asp-validation-for="Bolig_type_Id"></span>
+        </div>
+        <div>
+            <label asp-for="Bolig_type_Navn"></label>
+            <input asp-for="Bolig_type_Navn" />
+            <span asp-validation-for="Bolig_type_Navn"></span>
+        </div>
+        <div>
+            <label asp-for="Bolig_type_activitet_Navn"></label>
+            <input asp-for="Bolig_type_activitet_Navn" />
+            <span asp-validation-for="Bolig_type_activitet_Navn"></span>
+        </div>
+
+        <div>
+            <button type="submit">Update</button>
+        </div>
+
+
+    </form>

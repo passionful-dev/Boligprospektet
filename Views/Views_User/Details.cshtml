@@ -1,0 +1,44 @@
+@model UserDetailsViewModel
+
+@{
+    ViewBag.Title = "User Details";
+    
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <h3>@Model.PageTitle</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date_Time</th>
+                    <th>Fuldnavn</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Mobile</th>
+                    <th>User_Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Model.User.Date_Time</td>
+                    <td>@Model.User.Fuldnavn</td>
+                    <td>@Model.User.Email</td>
+                    <td>@Model.User.Password</td>
+                    <td>@Model.User.Mobile</td>
+                    <td>@Model.User.User_Type</td>
+                </tr>
+            </tbody>
+        </table>
+
+        @section Scripts {
+            <script src="~/js/CustomScript.js"></script>
+        }
+    </body>
+</html>
+
+ 

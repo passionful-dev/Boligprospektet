@@ -1,0 +1,38 @@
+@model FacilitetCreateViewModel
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <h3>@ViewBag.PageTitle</h3>
+
+    @*Without Bootstrap*@
+    <form asp-controller="Facilitet" asp-action="Register" method="post">
+
+        <div asp-validation-summary="All"></div>
+        <div>
+            <label asp-for="Bolig_Id"></label>
+            <input asp-for="Bolig_Id" />
+            <span asp-validation-for="Bolig_Id"></span>
+        </div>
+        <div>
+            <label asp-for="Faciliteter"></label>
+            <input asp-for="Faciliteter" />
+            <span asp-validation-for="Faciliteter"></span>
+        </div>
+        <div>
+            <label asp-for="Facilitet_Beskrivelser"></label>
+            <input asp-for="Facilitet_Beskrivelser" />
+            <span asp-validation-for="Facilitet_Beskrivelser"></span>
+        </div>
+
+        <button type="submit">Create</button>
+
+    </form>
+     
+    @section Scripts {
+            <script src="~/js/CustomScript.js"></script>
+    }
+</body>
+</html>

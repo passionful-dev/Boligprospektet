@@ -1,0 +1,43 @@
+@model IndholdCreateViewModel
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <h3>@ViewBag.PageTitle</h3>
+
+    @*Without Bootstrap*@
+    <form asp-controller="Indhold" asp-action="Register" method="post">
+
+        <div asp-validation-summary="All"></div>
+        <div>
+            <label asp-for="Date_Time"></label>
+            <input asp-for="Date_Time" />
+            <span asp-validation-for="Date_Time"></span>
+        </div>
+        <div>
+            <label asp-for="User_Id"></label>
+            <input asp-for="User_Id" />
+            <span asp-validation-for="User_Id"></span>
+        </div>
+        <div>
+            <label asp-for="Indhold_Navn"></label>
+            <input asp-for="Indhold_Navn" />
+            <span asp-validation-for="Indhold_Navn"></span>
+        </div>
+        <div>
+            <label asp-for="Indhold_Beskrivelser"></label>
+            <input asp-for="Indhold_Beskrivelser" />
+            <span asp-validation-for="Indhold_Beskrivelser"></span>
+        </div>
+
+        <button type="submit">Create</button>
+
+    </form>
+     
+    @section Scripts {
+            <script src="~/js/CustomScript.js"></script>
+    }
+</body>
+</html>
